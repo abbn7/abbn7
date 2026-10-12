@@ -1,105 +1,66 @@
-<picture>
+<picture><source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/header-mobile-dark.svg"><source media="(max-width: 600px) and (prefers-color-scheme: light)" srcset="assets/header-mobile-light.svg"><source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/header-light.svg"><img src="assets/header-dark.svg" width="100%" alt="Hi, I’m Abdelhamed Nada — Full Stack Developer"></picture>
 
-  <source media="(max-width: 640px) and (prefers-color-scheme: dark)" srcset="assets/hero-mobile-dark.svg">
-  <source media="(max-width: 640px) and (prefers-color-scheme: light)" srcset="assets/hero-mobile-light.svg">
-  <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.svg">
-  <img src="assets/hero-light.svg" width="100%" alt="عبد الحميد ندا — مطور Full Stack">
-</picture>
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/typing-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/typing-light.svg"><img src="assets/typing-dark.svg" width="700" alt="Full Stack · E-Commerce SaaS · AI Agents · Computer Science"></picture></p>
 
-<p align="center"><a href="README.md">English</a> · <a href="https://abdelhamed-nada.vercel.app/">الموقع الشخصي</a> · <a href="assets/Abdelhamed-Nada-CV.pdf">السيرة الذاتية</a></p>
+<p align="center"><a href="README.md">English</a></p>
 
-<div dir="rtl">
+<h2><img src="assets/icons/about.svg" width="25" alt=""> نبذة عني</h2>
 
-# عبد الحميد ندا
+مطور Full Stack من مصر، أركز على منصات التجارة الإلكترونية، وواجهات React، وأتمتة Python ووكلاء الذكاء الاصطناعي.
 
-مطور Full Stack من مصر، متاح للعمل عن بُعد. أركز على منصات التجارة الإلكترونية SaaS، وواجهات React، وأتمتة Python. أبني REST APIs وأنظمة المصادقة وتكاملات الدفع ووكلاء الذكاء الاصطناعي، مع عمل على عزل بيانات المتاجر ومعاملات قواعد البيانات والاختبارات من البداية إلى النهاية.
+```yaml
+name: Abdelhamed Nada
+location: Egypt 🇪🇬
+education: علوم الحاسب والذكاء الاصطناعي | جامعة طنطا
+focus: E-Commerce SaaS, React Interfaces, AI & Automation
+languages: Arabic (native), English (professional)
+availability: Open to remote work
+```
 
-## المشاريع الهندسية
+<h2><img src="assets/icons/connect.svg" width="25" alt=""> تواصل معي</h2>
 
-### VÉRA Commerce
+<p align="center"><a href="mailto:dior53634@gmail.com"><img src="assets/badges/gmail.svg" alt="Gmail — dior53634@gmail.com" height="28"></a> <a href="https://www.linkedin.com/in/abdelhamed-nada-030528324/"><img src="assets/badges/linkedin.svg" alt="LinkedIn — Abdelhamed Nada" height="28"></a></p>
 
-منصة لإنشاء وإدارة المتاجر الإلكترونية، تضم ثلاث واجهات متجر، ولوحات للتجار، ودعم العربية والإنجليزية، وعزل بيانات المتاجر في SQLite. تشمل Google OAuth مع PKCE، ومطابقة اشتراكات Paymob، واختبارات للمصادقة وعزل المتاجر وإتمام الطلبات.
+<p align="center"><a href="https://abdelhamed-nada.vercel.app"><img src="assets/badges/portfolio.svg" alt="Portfolio — explore my work" height="28"></a> <a href="https://github.com/abbn7"><img src="assets/badges/github-abbn7.svg" alt="GitHub — abbn7" height="28"></a> <a href="assets/Abdelhamed-Nada-CV.pdf"><img src="assets/badges/cv.svg" alt="Download my CV" height="28"></a></p>
 
-[عرض المشروع](https://abdelhamed-nada.vercel.app/projects/vera) · [السورس](https://github.com/202402972-stack/vera)
+<p align="center"><a href="https://wa.me/201096144345"><img src="assets/badges/whatsapp.svg" alt="Contact on WhatsApp" height="28"></a> <img src="assets/badges/remote.svg" alt="Open to remote work" height="28"></p>
 
-لقطات المشروع من موقعي تعرض التطبيق باستخدام حسابات وكتالوجات تجريبية؛ ولا تمثل مبيعات عملاء أو عمليات دفع إنتاجية.
+<h2>🛠️ Tech Stack</h2>
 
-### StoreKit
-
-متجر مبني باستخدام Next.js وSupabase/PostgreSQL وDrizzle ORM، مع Stripe Checkout والتحقق من توقيع webhooks ومنع تكرار معالجتها وتحديث الطلبات داخل معاملات قاعدة البيانات.
-
-[السورس — ريبو خاص](https://github.com/abbn7/storekit-ecommerce)
-
-### My AI Agent
-
-مساعد Telegram يعتمد على نماذج اللغة، عبر تطوير مشروع NanoBot مفتوح المصدر باستخدام Python، وإضافة أدوات متصفح Playwright وأدوات CLI وإعداد نشر Docker.
-
-[السورس — ريبو خاص](https://github.com/abbn7/my-agent)
-
-### Vanish Mail
-
-تطبيق بريد مؤقت يدعم خمسة صناديق mail.tm حية، واستخراج OTP بالعربية والإنجليزية، وحذف البريد من الخادم. يستخدم Zustand وTanStack Query، مع تعقيم HTML باستخدام DOMPurify وحجب الصور الخارجية افتراضيًا وتقييد إنشاء الحسابات.
-
-[دراسة المشروع](https://abdelhamed-nada.vercel.app/projects/vanish-mail) · [الموقع](https://temporary-zeta-one.vercel.app/)
-
-### GitHub Management Telegram Bot
-
-بوت لإدارة مستودعات GitHub وملفات ZIP من Telegram، مع تشفير بيانات الاعتماد وتأكيد الحذف، ونشر باستخدام Docker على Railway.
-
-[دراسة المشروع](https://abdelhamed-nada.vercel.app/projects/github-management-telegram-bot) · [الموقع](https://giit-website.vercel.app/)
-
-### Reelkeep
-
-بوت Telegram لتنزيل وسائط TikTok وInstagram العامة، يدعم العربية والإنجليزية والتنزيل على دفعات. يستخدم طوابير asyncio وتزامنًا محدودًا وإعادة المحاولة وحفظ الحالة في SQLite.
-
-[دراسة المشروع](https://abdelhamed-nada.vercel.app/projects/reelkeep) · [الموقع](https://reels-landing-zeta.vercel.app/)
-
-### واجهات WebGL ثنائية اللغة
-
-واجهات React باستخدام GLSL مخصص، وإدارة تكيفية لأداء GPU، ودعم العربية والإنجليزية وتقليل الحركة.
-
-[Marmo Verde](https://abdelhamed-nada.vercel.app/projects/green-webgl) · [Newabdate Performance](https://abdelhamed-nada.vercel.app/projects/newabdate-performance) · [Glass Morphic Brilliance](https://abdelhamed-nada.vercel.app/projects/glass-morphic-brilliance)
-
-
-## التعليم واللغات
-
-- جامعة طنطا — بكالوريوس علوم الحاسب والذكاء الاصطناعي، 2024 حتى الآن.
-- جامعة فاروس بالإسكندرية — دراسة علوم الحاسب، 2022–2024.
-- العربية: اللغة الأم. الإنجليزية: مستوى مهني.
-
-## المهارات التقنية
-
+<div align="center">
+<table>
+<tr><td align="center" width="155"><b>💻 Core</b></td><td align="center" width="155"><b>🎨 Frontend</b></td><td align="center" width="155"><b>⚙️ Backend</b></td><td align="center" width="155"><b>🔧 Tools</b></td></tr>
+<tr>
+<td align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack-core-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/stack-core-light.svg"><img src="assets/stack-core-dark.svg" width="112" alt="TypeScript, JavaScript, Python"></picture></td>
+<td align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack-frontend-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/stack-frontend-light.svg"><img src="assets/stack-frontend-dark.svg" width="112" alt="React, Next.js, HTML, CSS, Tailwind CSS, Three.js"></picture></td>
+<td align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack-backend-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/stack-backend-light.svg"><img src="assets/stack-backend-dark.svg" width="112" alt="Node.js, Express, PostgreSQL, SQLite, Supabase"></picture></td>
+<td align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack-tools-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/stack-tools-light.svg"><img src="assets/stack-tools-dark.svg" width="112" alt="Git, GitHub, Docker, GitHub Actions, Vercel"></picture></td>
+</tr>
+</table>
 </div>
 
+<p align="center"><sub>TanStack Start · Zustand · TanStack Query · WebGL / GLSL · Drizzle ORM · Stripe · Paymob · Railway</sub></p>
 
-| Area | Technologies |
-| :--- | :--- |
-| Languages | TypeScript, JavaScript, Python, SQL, HTML5, CSS3 |
-| Frontend | React, Next.js, TanStack Start, Tailwind CSS, Zustand, TanStack Query, Three.js, WebGL / GLSL |
-| Backend & data | Node.js, Express, REST APIs, PostgreSQL, SQLite, Supabase, Drizzle ORM |
-| AI & automation | LLM APIs, NanoBot, LiteLLM, Playwright, Telegram bots, asyncio |
-| Integrations & deployment | OAuth, Stripe, Paymob, Git, Docker, GitHub Actions, Vercel, Railway |
+<h3 align="center">🤖 AI & Automation</h3>
 
-<div dir="rtl">
+<p align="center"><img src="assets/badges/ai-llm-apis.svg" alt="LLM APIs" height="24"> <img src="assets/badges/ai-nanobot.svg" alt="NanoBot" height="24"> <img src="assets/badges/ai-litellm.svg" alt="LiteLLM" height="24"> <img src="assets/badges/ai-playwright.svg" alt="Playwright" height="24"> <img src="assets/badges/ai-telegram.svg" alt="Telegram bots" height="24"> <img src="assets/badges/ai-asyncio.svg" alt="asyncio" height="24"></p>
 
-## نشاط GitHub
+<h2>📊 GitHub Statistics</h2>
 
-هذا الرسم يخص حساب `abbn7` فقط، ويتحدث من بيانات GitHub الفعلية.
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/stats-light.svg"><img src="assets/stats-dark.svg" width="48%" alt="Actual GitHub statistics for abbn7"></picture> <picture><source media="(prefers-color-scheme: dark)" srcset="assets/streak-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/streak-light.svg"><img src="assets/streak-dark.svg" width="48%" alt="Actual GitHub contribution streak for abbn7"></picture></p>
 
-</div>
+<h2>📈 Contribution Graph</h2>
 
-<picture>
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/activity-light.svg"><img src="assets/activity-dark.svg" width="100%" alt="Actual contribution graph for abbn7"></picture></p>
 
-  <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/activity-light.svg">
-  <img src="assets/activity-light.svg" width="100%" alt="تقويم المساهمات الفعلي للحساب abbn7">
-</picture>
+<h2>🐍 Contribution Snake</h2>
 
-<div dir="rtl">
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/snake-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/snake-light.svg"><img src="assets/snake-dark.svg" width="100%" alt="Animated snake across the actual contribution calendar for abbn7"></picture></p>
 
-## التواصل
+<hr>
 
-[الموقع](https://abdelhamed-nada.vercel.app/) · [LinkedIn](https://www.linkedin.com/in/abdelhamed-nada-030528324/) · [البريد](mailto:dior53634@gmail.com) · [WhatsApp](https://wa.me/201096144345) · [السيرة الذاتية](assets/Abdelhamed-Nada-CV.pdf)
+<h3 align="center">💬 Engineering Focus</h3>
 
-</div>
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/focus-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/focus-light.svg"><img src="assets/focus-dark.svg" width="95%" alt="E-commerce SaaS. React interfaces. Python automation."></picture></p>
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/footer-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/footer-light.svg"><img src="assets/footer-dark.svg" width="100%" alt="Abdelhamed Nada — Full Stack Developer"></picture>

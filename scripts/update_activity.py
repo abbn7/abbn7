@@ -8,7 +8,7 @@ import tempfile
 import urllib.request
 from pathlib import Path
 
-from profile_core import normalize_calendar, render_calendar
+from profile_core import normalize_calendar, render_graph, render_snake, render_stats, render_streak
 
 
 def fetch_calendar(username, use_gh=False):
@@ -36,6 +36,29 @@ def fetch_calendar(username, use_gh=False):
     return normalize_calendar(user['contributionsCollection']['contributionCalendar'], username)
 
 
+def fetch_public_profile(username, use_gh=False):
+    def get(endpoint):
+        if use_gh:
+            result = subprocess.run(['gh', 'api', endpoint], capture_output=True, text=True, timeout=60, check=True)
+            return json.loads(result.stdout)
+        token = os.environ.get('GH_TOKEN') or os.environ.get('GITHUB_TOKEN')
+        request = urllib.request.Request('https://api.github.com/' + endpoint, headers={'User-Agent': 'Abdelhamed-Profile', 'Authorization': 'Bearer ' + token})
+        with urllib.request.urlopen(request, timeout=40) as response:
+            return json.load(response)
+    user = get('users/' + username)
+    if user['login'].lower() != username.lower():
+        raise ValueError('Public account mismatch')
+    stars = 0
+    page = 1
+    while True:
+        repos = get(f'users/{username}/repos?type=owner&per_page=100&page={page}')
+        stars += sum(repo['stargazers_count'] for repo in repos if not repo.get('private'))
+        if len(repos) < 100:
+            break
+        page += 1
+    return {'public_repos': user['public_repos'], 'followers': user['followers'], 'public_stars': stars}
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--username', required=True)
@@ -44,7 +67,13 @@ def main():
     args = parser.parse_args()
     try:
         data = fetch_calendar(args.username, args.gh)
-        rendered = {f'activity-{theme}.svg': render_calendar(data, theme) for theme in ['dark', 'light']}
+        profile = fetch_public_profile(args.username, args.gh)
+        rendered = {}
+        for theme in ['dark', 'light']:
+            rendered[f'activity-{theme}.svg'] = render_graph(data, theme)
+            rendered[f'snake-{theme}.svg'] = render_snake(data, theme)
+            rendered[f'stats-{theme}.svg'] = render_stats(data, profile, theme)
+            rendered[f'streak-{theme}.svg'] = render_streak(data, theme)
         args.output.mkdir(parents=True, exist_ok=True)
         for filename, content in rendered.items():
             with tempfile.NamedTemporaryFile('w', encoding='utf-8', dir=args.output, delete=False) as temp:

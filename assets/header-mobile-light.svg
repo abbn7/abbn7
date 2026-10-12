@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="205" viewBox="0 0 600 205" role="img" aria-label="Abdelhamed Nada — Full Stack Developer">
+<defs><linearGradient id="wave" x1="0" y1="0" x2="1" y2=".3"><stop stop-color="#f0f9ff"/><stop offset=".48" stop-color="#e0f2fe"/><stop offset="1" stop-color="#0ea5e9"/></linearGradient></defs>
+<path d="M0 0 H600 V159 Q420 109 300 149 T0 181 Z" fill="url(#wave)"/>
+<path class="wave" d="M0 157 Q150 110 300 157 T600 162 V196 Q450 135 300 175 T0 198 Z" fill="#0ea5e9" opacity=".16"/>
+<g text-anchor="middle" font-family="Segoe UI,Arial,sans-serif"><text x="300" y="48" font-size="22" fill="#0369a1">Hi, I’m</text><text x="300" y="94" font-size="38" font-weight="700" fill="#0f172a">Abdelhamed Nada</text><text x="300" y="132" font-size="18" fill="#0f172a">Full-Stack Developer</text><text x="300" y="158" font-size="15" fill="#0369a1">E-Commerce SaaS · AI &amp; Automation</text></g>
+<style>.wave{animation:float 6s ease-in-out infinite}@keyframes float{50%{transform:translateY(6px)}}@media(prefers-reduced-motion:reduce){.wave{animation:none}}</style>
+</svg>

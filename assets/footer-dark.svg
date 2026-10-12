@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="100" viewBox="0 0 1200 100" role="img" aria-label="Abdelhamed Nada — Full Stack Developer">
+<defs><linearGradient id="wave" x1="0" y1="0" x2="1" y2=".3"><stop stop-color="#0d1117"/><stop offset=".48" stop-color="#161b22"/><stop offset="1" stop-color="#0ea5e9"/></linearGradient></defs>
+<path d="M0 45 Q300 0 600 38 T1200 35 V100 H0 Z" fill="url(#wave)"/>
+<text x="600" y="82" text-anchor="middle" font-family="Consolas,monospace" font-size="13" fill="#f0f6fc">ABDELHAMED NADA · FULL STACK DEVELOPER</text>
+</svg>
